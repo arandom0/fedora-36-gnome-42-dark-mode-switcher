@@ -1,2 +1,2 @@
 # fedora-36-gnome-42-dark-mode-switcher
-Full dark mode switcher. GTK + Prefer Dark (GNOME 42's new thing)
+Put the .desktop file either in ~/.local/share/applications (for current user) or /usr/share/applications (for all users)
