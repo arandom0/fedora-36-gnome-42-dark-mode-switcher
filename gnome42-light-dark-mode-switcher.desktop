@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Light/Dark Mode Switcher
+Icon=org.gnome.Settings
+Exec=gnome-terminal --title "Light/Dark Mode Switcher" -- sh -c 'while [ 1 -eq 1 ]; do echo "Press 1 for light theme, 2 for dark theme, and hit enter"; read userInput; userInput=$(echo "$userInput" | xargs); if [ "$userInput" -eq "1" ]; then g42Theme="prefer-light"; gtkTheme="Adwaita"; elif [ "$userInput" -eq "2" ]; then g42Theme="prefer-dark"; gtkTheme="Adwaita-dark"; else clear; echo "Invalid input, try again"; continue; fi; gsettings set org.gnome.desktop.interface color-scheme "$g42Theme" > /dev/null 2>&1; gsettings set org.gnome.desktop.interface gtk-theme "$gtkTheme" > /dev/null 2>&1; clear; echo "OPERATION COMPLETE"; done;'
